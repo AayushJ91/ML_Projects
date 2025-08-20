@@ -1,4 +1,4 @@
-# General Note
+# General Notes
 
 ## Normalization:
 * Changing the scale of the data points into small fixed ranges
@@ -85,3 +85,31 @@
 * Uses the min and max values of that feature(column)
 * It brings the datapoints between 0-1
 * Here the outliers streches the difference (max - min) and brings most values to 0
+
+## Confusion Matrix
+* Rows depict the predicted (output) of our model and columns are the actual outcomes
+* True Positive - model predicted positive and the predictions are true (match with the actual outcome). In the top left
+* True Negative - model predicted negative and the predictions are true (match with the actual outcome). In the bottom right
+* False Negatives - model predicted negative and the predictions are false (does'nt match with the actual outcome). In the bottom left
+* False Positive - model predicted positive and the predictions are false (does'nt match with the actual outcome). In the top right
+* in confusion matrix having shape more than 2X2 all the diagnol elements are treated as true values
+
+### Senstitivity:-
+* True Positives / (True Positives + False Negatives)
+* It gives us a number which shows us how much predicted outcome are correctly identified as positive
+### Specificity:-
+* True Negatives / (True Negatives + False Positives)
+* It tells us how much predicted outcome are correctly identified as negative
+### Accuracy:-
+correct predictions / total predictions
+### Precision:-
+True positive / total positive predictions = TP / (TP + FP)
+* It tells how much positive predictions are true
+* predictions is the base line
+### Recall:-
+True Positive / actual true = TP / (TP + FN)
+* It tells how much predictions are true out of how much are actualy true
+* actual truth is the base line
+### F1 score:-
+2*(precision*recall) / (precision + recall)
+* Harmonic mean between precision and recall
