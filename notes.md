@@ -66,7 +66,7 @@
 * Assumes that features are not related
 * Mostly used for text related datasets
 ### PROS:
-* PVery fast to train and predict.
+* Very fast to train and predict.
 * Works surprisingly well in high-dimensional spaces (like text).
 * Requires small training data.
 * Handles multiple classes naturally.
@@ -74,6 +74,9 @@
 * Assumes feature independence, which is often unrealistic.
 * Struggles with numerical data unless discretized.
 * Zero probability problem (if a feature/class combination never occurs → needs smoothing).
+
+## SVM (Supported Vector Machine)
+* This model creates
 
 ## Different types of scalers
 
