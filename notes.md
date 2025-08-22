@@ -141,3 +141,8 @@ For a dataset containing texts such as spam email dataset we cannot take input a
 * IDF = log (Total Entries / number of documents where that word is occuring)
 * TfIdf = TF*IDF
 * Now we will calculate the TF IDF of each word for each entry
+
+
+## Pipelines 
+* These are a kind of structures which includes transformation and fiting in one line
+* Here the inside things are called the steps and it includes transformation step and then estimators step
