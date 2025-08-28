@@ -8,11 +8,12 @@
 ## Regularization:
 * In easy terms it sets the hyperparameter(self.theta) of that feature with very large influence(large powers in the relationship)
 * for example - if a dataset has relation of 2 features as x1 + x2**5 and the values for both features are 100 then the value for 2nd term (i.e. x2) will become 10000000000 and the value of x1 will be ignored
+* but by observation there is an influence of x1 also
 * Thus to solve this we will set the coeficient of x2 term small like 0.000008 so the new relation will become - x1 + 0.000008x2**5
 * Used for models like linear regression and logistic regression which are based on a equartion for a decision boundary
 * The cost function will be given as : Cost = Loss + lambda(sum of squares of the present hyperparameter of each of feature)
 
-## Logistic Regression: 
+## Logistic Regression:
 * Uses sigmoid function for classification
 * The input of sigmoid function is normal regression function
 * ![image-2.png](attachment:image-2.png)
@@ -44,7 +45,7 @@
 * This algosrithm makes the decision based on the tree nodes and leaf nodes
 * It takes the targets and different features one-by-one
 * Then it classifies the target wrt each target
-* Followed by gini impurity : 1 - (probability that it will be class i based on the selected feature)**2; i = (0, number of classes)
+* Followed by gini impurity : 1 - (probability that it will be class i based on the selected feature)**2; i = [0, number of classes]
 * Now the feature having the least gini impurity will be taken as the primary node
 * Followed by the bifurcation based on the given feature and finding the impurities for the each feature
 ### PROS:
@@ -80,7 +81,7 @@
 * The nearest data points from each class is called Support Vectors
 * It is a good model for binary classification as it sets margins and boundaries
 * If the classes that cannot be seperated by a straight line we use kernel functions
-* In linear seperable dataset also it uses linear kernel 
+* Linear seperable dataset also it uses linear kernel 
 * But for other datasets different kernels can be used - 'rbf, poly, sigmoid'
 * With kernel we transform the data into higher dimension and then find a new boundary
 
@@ -97,28 +98,30 @@
 
 ## Confusion Matrix
 * Rows depict the predicted (output) of our model and columns are the actual outcomes
-* True Positive - model predicted positive and the predictions are true (match with the actual outcome). In the top left
-* True Negative - model predicted negative and the predictions are true (match with the actual outcome). In the bottom right
-* False Negatives - model predicted negative and the predictions are false (does'nt match with the actual outcome). In the bottom left
-* False Positive - model predicted positive and the predictions are false (does'nt match with the actual outcome). In the top right
+* True Positive - model predicted positive and the predictions are true (matched with the actual outcome). In the top left
+* True Negative - model predicted negative and the predictions are true (matched with the actual outcome). In the bottom right
+* False Negatives - model predicted negative and the predictions are false (does'nt matched with the actual outcome). In the bottom left
+* False Positive - model predicted positive and the predictions are false (does'nt matched with the actual outcome). In the top right
 * in confusion matrix having shape more than 2X2 all the diagnol elements are treated as true values
 
 ### Senstitivity:-
 * True Positives / (True Positives + False Negatives)
-* It gives us a number which shows us how much predicted outcome are correctly identified as positive
+* It gives us a number which shows us out of actual true results how many are predicted true
 ### Specificity:-
 * True Negatives / (True Negatives + False Positives)
-* It tells us how much predicted outcome are correctly identified as negative
+* It tells us how much out of actual negative result how many our model predicted as negative
 ### Accuracy:-
 correct predictions / total predictions
 ### Precision:-
 True positive / total positive predictions = TP / (TP + FP)
 * It tells how much positive predictions are true
 * predictions is the base line
+* Of all the items I predicted were positive, how many were actually positive?
 ### Recall:-
 True Positive / actual true = TP / (TP + FN)
 * It tells how much predictions are true out of how much are actualy true
 * actual truth is the base line
+* Of all the items that were actually positive, how many did I correctly identify?
 ### F1 score:-
 2*(precision*recall) / (precision + recall)
 * Harmonic mean between precision and recall
@@ -146,3 +149,15 @@ For a dataset containing texts such as spam email dataset we cannot take input a
 ## Pipelines 
 * These are a kind of structures which includes transformation and fiting in one line
 * Here the inside things are called the steps and it includes transformation step and then estimators step
+
+## ROC graph
+* ROC stands for Reciever Operator Characteristics
+* It is a graphhical representation of binary classification model for different threshold values
+* y-axis shows the True Positive Rate (TPR) in simple words it is sensitivity (recall)
+* x-axis shows the False Positive Rate (FPR) which is (1 - Specificity)
+* ROC graph summarizes the confusion matrix of different thresholds for a classification task
+* for different models of classifications, the model having the large AUC (Area Under Curve) will be a better classifier
+* AUC varies between 0 and 1
+* False Positive Rate is often replaced by the precision
+* For a point in ROC curve the y projection shows the percentage of how many positive predictions are actually true
+* and the x projection shows the percentage of how many positive predictions are wrongly predicted
