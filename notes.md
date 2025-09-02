@@ -173,3 +173,23 @@ For a dataset containing texts such as spam email dataset we cannot take input a
 * We can set the number of folds (k). for k = every sample in training data then it is called "Leave One Out CV"
 * After fiting model with inner training dataset we test it with validation test
 * This is done k times and for every time we get a score called Cross Validation Score for that iteration
+
+## **Ensemble learning**:
+* Breaking the original dataset into k smaller subsets.
+* Applying the same model to all the subsets and get the result
+* The subsets are made with replacement resampling method and is called 'Bootstrapping Aggregation' or 'Bagging'
+* from that use the prediction that is predicted most number of times
+* Meaning the prediction which is predicted most of the time among the subsets
+* Random Forest model is an example of Bootstrapping aggregations
+* It just not only sample the rows (data samples) but also sample the fetaures
+* We can do bagging using various models (SVM, logistic regression etc.)
+* When the each underlying model is Random Forest it is called "Bagged Tree"
+
+## **Random Forest Classifier**:
+* for the bagging the most primary model is Random Forest Classifier.
+* It consists of many trees therefore called Forest.
+* It itself breaks the data into several sub samples and apply the decision trees
+* n_estimators - number of trees. default = 100
+* criterion - The function to measure the quality of a split. default = "gini"
+* max_depth - The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples. default = None
+* The default values for the parameters controlling the size of the trees (e.g. max_depth, min_samples_leaf, etc.) lead to fully grown and unpruned trees which can potentially be very large on some data sets.
