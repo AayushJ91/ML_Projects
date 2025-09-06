@@ -13,6 +13,12 @@
 * Used for models like linear regression and logistic regression which are based on a equation for a decision boundary
 * The cost function will be given as : Cost = Loss + lambda(sum of squares of the present hyperparameter of each of feature)
 
+* High Variance means Overfitting - less error in training dataset and more error in test dataset
+* High Bias means Underfitting - the errors in both dataset is high but they are high in themselves
+* Perfect model - Low bias and Low Variance
+* Variance means the distribution of datapoints in the dataset (High Var - more distribution, Low Vae - less distribution)
+* Bias means the distance between the datapoints and the truth
+
 ## **Logistic Regression**:
 * Uses sigmoid function for classification
 * The input of sigmoid function is normal regression function
@@ -193,3 +199,17 @@ For a dataset containing texts such as spam email dataset we cannot take input a
 * criterion - The function to measure the quality of a split. default = "gini"
 * max_depth - The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples. default = None
 * The default values for the parameters controlling the size of the trees (e.g. max_depth, min_samples_leaf, etc.) lead to fully grown and unpruned trees which can potentially be very large on some data sets.
+
+## **Gradient Boosting**:
+* Here many of the sequential decision trees are used
+* At first we will take the parameters(features, Xi) and the target(y) and a base model - could be anything. 
+* we will take the prediction of base model(it is avg of target in most cases) and find the difference with the original targets
+* These differences are termed as Ri, now we have R1
+* Now we will make a decsion tree with inputs as Xi and R1 and it will predict R1
+* Then the output of decision tree will be used and actual predictions will be calculated
+* it will be calculated using : base model output + Learning rate of respective tree * predicted Ri
+* This term I am naming as yi
+* After this the next tree will be trained on Xi and y1 with a different learning rate
+* And this will go on for n times
+* The basic formula for gradient boosting is = summ[alpha_i*hi(x)] from 0 to n where alpha_i belongs to [0,1]
+* The hi(x) function are the functions for algorithims for different decision trees and h0(x) is the base model
