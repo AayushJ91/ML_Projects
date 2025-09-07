@@ -1,3 +1,5 @@
+[[Normalization]]
+[[Regularization]]
 ### **Standard Scaler**
 * Uses mean and standard deviation for the scaling
 * It does not deals with outliers as the outliers bring the std and mean towards them

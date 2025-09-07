@@ -1,3 +1,5 @@
+[[Normalization]]
+[[Scalers]]
 * In easy terms it sets the hyperparameter(self.theta) of that feature with very large influence(large powers in the relationship)
 * for example - if a dataset has relation of 2 features as x1 + x2**5 and the values for both features are 100 then the value for 2nd term (i.e. x2) will become 10000000000 and the value of x1 will be ignored
 * but by observation there is an influence of x1 also

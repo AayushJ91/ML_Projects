@@ -50,8 +50,20 @@ Focused on **learning algorithms from scratch** and practicing with datasets.
 - **data/**
   - Contains datasets used for practice and model training.
 
-- **notes.md**
-  - Notes and observations while learning ML.
+- **mini-project.ipynb**
+  - Explored ensemble learning using Random Forest Classifiers and Gradient Boosting applying it on credit card transaction fraud dataset
+  - also got introduced to SMOTE (Synthetic Minority Oversampling Technique)
+  - The dataset contains of 30 features and 1 target column depicting the fraud class of transactions (1 referring to fraud and 0 referring to no fraud)
+    - No null values in any features
+    - Was imbalanced with more non fraud cases a lot more than fraud cases
+    - Handled it with SMOTE by equalizing the non-fraud class with the fraud class
+  - Findings:
+    - Used SMOTE to increase the class 1
+    - Implemented with and without smote
+    - After SMOTE both the classifiers gave bad results as compared to before SMOTE
+    - Modified the Random Forest with `n_estimators` (reduced it) and `max_depth` (changed it to 75 from `None`) in result it gave almost same result
+    - Modified the Gradient Boosting with `n_estimators` (reduced it), `max_depth` (changed it to 75 from `None`) and `max_fetures` (from `None` to `'sqrt'`), in result it gave better result
+
 
 ---
 
