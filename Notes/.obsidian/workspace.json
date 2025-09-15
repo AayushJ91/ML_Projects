@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Naive Bayes.md",
+                "file": "Gradient Boosting.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Naive Bayes"
+              "title": "Gradient Boosting"
             }
           },
           {
@@ -151,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Variance and Bias.md",
+                "file": "Gradient Boosting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +161,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Variance and Bias"
+              "title": "Backlinks for Gradient Boosting"
             }
           },
           {
@@ -212,8 +212,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -228,30 +227,30 @@
   },
   "active": "b0db0b2f07c2e4ef",
   "lastOpenFiles": [
+    "Ensemble Learning.md",
+    "SVM.md",
+    "Text based Model.md",
+    "Linear Models.md",
+    "Logistic Regression.md",
+    "Decision Tree.md",
+    "Confusion Matrix and basic Terminologies.md",
+    "Cross Validation.md",
+    "Naive Bayes.md",
     "Neural Networks.md",
     "Gradient Boosting.md",
     "Regularization.md",
     "Normalization.md",
     "Scalers.md",
     "Classification Models.md",
-    "Text based Model.md",
-    "Ensemble Learning.md",
     "Random Forest.md",
-    "Decision Tree.md",
     "ROC Graph.md",
-    "Linear Models.md",
     "Tree Based Models.md",
-    "Confusion Matrix and basic Terminologies.md",
     "Mertrics.md",
     "notes.md",
-    "Cross Validation.md",
-    "Naive Bayes.md",
     "TFI-DF Vectorizer.md",
     "Vectorizer.md",
     "Variance and Bias.md",
     "Welcome.md",
-    "SVM.md",
-    "KNN.md",
-    "Logistic Regression.md"
+    "KNN.md"
   ]
 }
